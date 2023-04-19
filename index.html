@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <title>Google</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Pass data from index.html to search.html -->
+    <script>
+        function testJS() {
+            var b = document.getElementById('search').value,
+            url = 'http://path_to_your_html_files/next.html?search=' + encodeURIComponent(b);
+            document.location.href = url;
+        }
+    </script>
+
+</head>
+<body>
+
+    <nav class="nav">
+        <a class="nav-text" href="#">Gmail</a>
+        <a class="nav-text" href="#">Images</a>
+        <a class="points" href="#">
+            <img class="points-img" src="assets/img/points.png">
+        </a>
+        <a class="points user-margin" href="https://github.com/matteotagliatti" target="_blank">
+            <img class="user-img" src="assets/img/user-img.png">
+        </a>
+    </nav>
+
+    <form action="search.html" method="GET">
+        <div class="search">
+            <img class="logo" src="assets/img/google-logo.png">
+            <div class="searchbar">
+                <img class="search-icon" src="assets/img/search-icon.png">
+                <input class="search-input" type="text" id="search" name="search" required>
+                <img class="microphone-icon" src="assets/img/microphone-icon.png">
+            </div>
+            <div class="search-buttons">
+                <input class="search-button" type="submit" value="Google Search"></input>
+                <a href="#"><button class="search-button">I'm Feeling Lucky</button></a>
+            </div>
+            <div class="lang">
+                <p>Google offered in: <a href="#">Italiano</a></p>
+            </div>
+        </div>
+    </form>
+
+    <footer class="country">
+        <div class="left">
+            <p class="footer-link reset-margin-p">Italy</p>
+          </div>
+    </footer>
+
+    <footer class="footer">
+        <div class="left">
+            <a class="footer-link mobile-padding" href="#">About</a>
+            <a class="footer-link" href="#">Advertising</a>
+            <a class="footer-link" href="#">Business</a>
+            <a class="footer-link mobile-none" href="#">How Search works</a>
+          </div>
+          <div class="right">
+            <a class="footer-link" href="#">Privacy</a>
+            <a class="footer-link" href="#">Terms</a>
+            <a class="footer-link" href="#">Settings</a>
+          </div>
+    </footer>
+    
+</body>
+</html> 

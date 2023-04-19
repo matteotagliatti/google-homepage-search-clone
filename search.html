@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <title>Google Search</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mortezaom/google-sans-cdn@master/fonts.css" />
+
+
+    <!-- Pass data from index.html to search.html -->
+    <script>
+        window.onload = function () {
+            var url = document.location.href,
+            params = url.split('?')[1].split('&'),
+            data = {}, tmp;
+            for (var i = 0, l = params.length; i < l; i++) {
+            tmp = params[i].split('=');
+            data[tmp[0]] = tmp[1];
+            }
+        
+        /* String rendered in element with id=here */
+        document.getElementById('here').innerHTML = data.search;
+        }
+    </script>
+
+</head>
+<body>
+
+    <header class="search-header">
+        <nav class="search-nav">
+            <a href="index.html"><img src="assets/img/google-logo.png"></a>
+            <form>
+                <div class="searchbar search-searchbar">
+                    <div class="search-input"><span class="search-text" id="here"></span></div>
+                    <img class="microphone-icon" src="assets/img/clear-icon.png">
+                    <span class="vertical-border"></span>
+                    <img class="microphone-icon" src="assets/img/microphone-icon.png">
+                    <img class="search-icon" src="assets/img/searchresults-icon.png">
+                </div>
+            </form>
+            <div class="nav search-icons search-mobile-none">
+                <a class="points" href="#">
+                    <img class="gear-img" src="assets/img/gear.png">
+                </a>
+                <a class="points" href="#">
+                    <img class="points-img" src="assets/img/points.png">
+                </a>
+                <a class="points user-margin" href="https://github.com/matteotagliatti" target="_blank">
+                    <img class="user-img" src="assets/img/user-img.png">
+                </a>
+            </div>
+        </nav>
+
+        <nav class="search-second-nav">
+            <div>
+                <a href="#" class="selected">All</a>
+                <a href="#">Images</a>
+                <a href="#">Maps</a>
+                <a href="#">Videos</a>
+                <a href="#">News</a>
+                <a href="#">More</a>
+            </div>
+            <div class="search-mobile-none">
+                <a href="#">Tools</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="search-results">
+        <div class="starts">About 122,000,000 results (0.24 seconds)</div>
+
+        <div class="search-result-text">
+            <a class="nounderline" href="https://github.com/matteotagliatti" target="_blank">
+            <p class="search-url">https://github.com/matteotagliatti</p>
+            <h3 class="underlineonhover">GitHub</h3>
+            <p>Welcome to my <strong>GitHub</strong>. My central hub where you can find all my public works with code. In my profile i've have even private repo for clients and other stuff i ...
+            </p>
+            <div>
+                <a href="https://github.com/matteotagliatti" target="_blank">GitHub</a> - <a href="https://github.com/matteotagliatti" target="_blank">Repositories</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="search-result-text margin-top-result">
+            <a class="nounderline" href="https://matteotagliatti.it" target="_blank">
+            <p class="search-url">https://matteotagliatti.it</p>
+            <h3 class="underlineonhover">Matteo Tagliatti - Web Developer</h3>
+            <p>Welcome to my personal website. Here you can find all my works in my portfolio. My website is designed and developed from scratch with HTML, CSS, JS ...
+            </p>
+            <div>
+                <a href="https://matteotagliatti.it" target="_blank">Home</a> - <a href="https://matteotagliatti.it/lavori" target="_blank">Works</a> - <a href="https://matteotagliatti.it/libri" target="_blank">Books</a>
+            </div>
+            </a>
+        </div>
+
+        <div class="search-result-text margin-top-result">
+            <p class="search-url">https://en.wikipedia.org</p>
+            <h3>Wikipedia</h3>
+            <p>Welcome to <strong>Wikipedia</strong>, the free encyclopedia that anyone can edit. 6,347,177 articles in English · The arts · Biography · Geography · History · Mathematics ...
+            </p>
+            <div>
+                <a href="">Wiki</a> - <a href="">Portal:Current events</a> - <a href="">2021</a>
+            </div>
+        </div>
+
+        <div class="search-result-text margin-top-result">
+            <p class="search-url">https://it.wikipedia.org</p>
+            <h3>Wikipedia</h3>
+            <p>Benveuto su <strong>Wikipedia</strong>, l'enciclopedia libera che ognuno può modificare con 2,195,735 articoli in Italiano · Arti · Biografie · Geografia · Storia · Matematica ...
+            </p>
+            <div>
+                <a href="">Wiki</a> - <a href="">Portale:Eventi oggi</a> - <a href="">2021</a>
+            </div>
+        </div>
+
+        <div class="search-result-text margin-top-result">
+            <p class="search-url">https://youtube.com</p>
+            <h3>YouTube</h3>
+            <p>Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on <strong>YouTube</strong>
+            </p>
+            <div>
+                <a href="">Premium</a> - <a href="">Videos</a> - <a href="">History</a>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html> 
